@@ -1,0 +1,94 @@
+[2024-10-23T13:52:25.899-0300] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: send_whatsapp_message_dag_19.send_whatsapp_message scheduled__2024-10-21T17:05:00+00:00 [queued]>
+[2024-10-23T13:52:25.919-0300] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: send_whatsapp_message_dag_19.send_whatsapp_message scheduled__2024-10-21T17:05:00+00:00 [queued]>
+[2024-10-23T13:52:25.920-0300] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-23T13:52:25.921-0300] {taskinstance.py:1363} INFO - Starting attempt 1 of 2
+[2024-10-23T13:52:25.921-0300] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-23T13:52:26.064-0300] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): send_whatsapp_message> on 2024-10-21 17:05:00+00:00
+[2024-10-23T13:52:26.069-0300] {standard_task_runner.py:55} INFO - Started process 93354 to run task
+[2024-10-23T13:52:26.078-0300] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'send_whatsapp_message_dag_19', 'send_whatsapp_message', 'scheduled__2024-10-21T17:05:00+00:00', '--job-id', '568', '--raw', '--subdir', 'DAGS_FOLDER/agoravai.py', '--cfg-path', '/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/tmp619mkt8x']
+[2024-10-23T13:52:26.081-0300] {standard_task_runner.py:83} INFO - Job 568: Subtask send_whatsapp_message
+[2024-10-23T13:52:26.210-0300] {task_command.py:376} INFO - Running <TaskInstance: send_whatsapp_message_dag_19.send_whatsapp_message scheduled__2024-10-21T17:05:00+00:00 [running]> on host MacBook-Air-de-Pedro.local
+[2024-10-23T13:52:26.318-0300] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=arth_brave
+AIRFLOW_CTX_DAG_ID=send_whatsapp_message_dag_19
+AIRFLOW_CTX_TASK_ID=send_whatsapp_message
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-21T17:05:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-21T17:05:00+00:00
+[2024-10-23T13:52:26.436-0300] {__init__.py:56} INFO - -- BEGIN Twilio API Request --
+[2024-10-23T13:52:26.436-0300] {__init__.py:66} INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/AC069f1485becb681509aa3ea0b36dec02/Messages.json
+[2024-10-23T13:52:26.437-0300] {__init__.py:69} INFO - Headers:
+[2024-10-23T13:52:26.437-0300] {__init__.py:73} INFO - Content-Type : application/x-www-form-urlencoded
+[2024-10-23T13:52:26.438-0300] {__init__.py:73} INFO - User-Agent : twilio-python/9.3.4 (Darwin x86_64) Python/3.10.11
+[2024-10-23T13:52:26.438-0300] {__init__.py:73} INFO - X-Twilio-Client : python-9.3.4
+[2024-10-23T13:52:26.438-0300] {__init__.py:73} INFO - Accept-Charset : utf-8
+[2024-10-23T13:52:26.439-0300] {__init__.py:73} INFO - Accept : application/json
+[2024-10-23T13:52:26.439-0300] {__init__.py:75} INFO - -- END Twilio API Request --
+[2024-10-23T13:52:26.450-0300] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/private/var/root/.local/share/uv/python/cpython-3.10.11-macos-x86_64-none/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x109238eb0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.twilio.com', port=443): Max retries exceeded with url: /2010-04-01/Accounts/AC069f1485becb681509aa3ea0b36dec02/Messages.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x109238eb0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/dags/agoravai.py", line 18, in send_whatsapp_message
+    message = client.messages.create(
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 565, in create
+    payload = self._version.create(
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/twilio/base/version.py", line 454, in create
+    response = self.request(
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/twilio/base/version.py", line 47, in request
+    return self.domain.request(
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/twilio/base/domain.py", line 49, in request
+    return self.twilio.request(
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/twilio/base/client_base.py", line 92, in request
+    return self.http_client.request(
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/twilio/http/http_client.py", line 106, in request
+    response = session.send(
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.twilio.com', port=443): Max retries exceeded with url: /2010-04-01/Accounts/AC069f1485becb681509aa3ea0b36dec02/Messages.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x109238eb0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+[2024-10-23T13:52:26.472-0300] {taskinstance.py:1401} INFO - Marking task as UP_FOR_RETRY. dag_id=send_whatsapp_message_dag_19, task_id=send_whatsapp_message, execution_date=20241021T170500, start_date=20241023T165225, end_date=20241023T165226
+[2024-10-23T13:52:26.526-0300] {standard_task_runner.py:100} ERROR - Failed to execute job 568 for task send_whatsapp_message (HTTPSConnectionPool(host='api.twilio.com', port=443): Max retries exceeded with url: /2010-04-01/Accounts/AC069f1485becb681509aa3ea0b36dec02/Messages.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x109238eb0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')); 93354)
+[2024-10-23T13:52:26.539-0300] {local_task_job.py:159} INFO - Task exited with return code 1
+[2024-10-23T13:52:26.591-0300] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

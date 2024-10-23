@@ -1,0 +1,37 @@
+[2024-10-22T17:49:20.177-0300] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: psg_5.conversation_0 manual__2024-10-22T20:48:01.515497+00:00 [queued]>
+[2024-10-22T17:49:20.190-0300] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: psg_5.conversation_0 manual__2024-10-22T20:48:01.515497+00:00 [queued]>
+[2024-10-22T17:49:20.191-0300] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-22T17:49:20.191-0300] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2024-10-22T17:49:20.191-0300] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-22T17:49:20.207-0300] {taskinstance.py:1383} INFO - Executing <Task(SubDagOperator): conversation_0> on 2024-10-22 20:48:01.515497+00:00
+[2024-10-22T17:49:20.210-0300] {standard_task_runner.py:55} INFO - Started process 38937 to run task
+[2024-10-22T17:49:20.218-0300] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'psg_5', 'conversation_0', 'manual__2024-10-22T20:48:01.515497+00:00', '--job-id', '124', '--raw', '--subdir', 'DAGS_FOLDER/news2.py', '--cfg-path', '/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/tmp3f97quo6']
+[2024-10-22T17:49:20.221-0300] {standard_task_runner.py:83} INFO - Job 124: Subtask conversation_0
+[2024-10-22T17:49:20.379-0300] {task_command.py:376} INFO - Running <TaskInstance: psg_5.conversation_0 manual__2024-10-22T20:48:01.515497+00:00 [running]> on host MacBook-Air-de-Pedro.local
+[2024-10-22T17:49:20.486-0300] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=psg_5
+AIRFLOW_CTX_TASK_ID=conversation_0
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-22T20:48:01.515497+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-22T20:48:01.515497+00:00
+[2024-10-22T17:49:20.494-0300] {logging_mixin.py:137} WARNING - /private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/airflow/utils/context.py:204 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2024-10-22T17:49:20.566-0300] {subdag.py:171} INFO - Created DagRun: scheduled__2024-10-22T20:48:01.515497+00:00
+[2024-10-22T17:49:20.616-0300] {taskinstance.py:1155} INFO - Dependencies not met for <TaskInstance: psg_5.conversation_0 manual__2024-10-22T20:48:01.515497+00:00 [running]>, dependency 'Task Instance Not Running' FAILED: Task is in the running state
+[2024-10-22T17:49:20.626-0300] {taskinstance.py:1155} INFO - Dependencies not met for <TaskInstance: psg_5.conversation_0 manual__2024-10-22T20:48:01.515497+00:00 [running]>, dependency 'Task Instance State' FAILED: Task is in the 'running' state.
+[2024-10-22T17:49:20.668-0300] {local_task_job.py:98} INFO - Task is not able to be run
+[2024-10-22T17:58:09.278-0300] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 38937. PIDs of all processes in the group: [38937]
+[2024-10-22T17:58:09.283-0300] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 38937
+[2024-10-22T17:58:09.285-0300] {taskinstance.py:1562} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-10-22T17:58:09.298-0300] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/airflow/sensors/base.py", line 211, in execute
+    time.sleep(self._get_next_poke_interval(started_at, run_duration, try_number))
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1564, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2024-10-22T17:58:09.311-0300] {taskinstance.py:1401} INFO - Marking task as FAILED. dag_id=psg_5, task_id=conversation_0, execution_date=20241022T204801, start_date=20241022T204920, end_date=20241022T205809
+[2024-10-22T17:58:09.339-0300] {standard_task_runner.py:100} ERROR - Failed to execute job 124 for task conversation_0 (Task received SIGTERM signal; 38937)
+[2024-10-22T17:58:09.346-0300] {process_utils.py:79} INFO - Process psutil.Process(pid=38937, status='terminated', exitcode=1, started='17:49:20') (38937) terminated with exit code 1

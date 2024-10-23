@@ -1,0 +1,13 @@
+[2024-10-23T11:45:44.144-0300] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: psg_8.conversation_2.delayers scheduled__2024-10-23T14:44:00+00:00 [queued]>
+[2024-10-23T11:45:44.161-0300] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: psg_8.conversation_2.delayers scheduled__2024-10-23T14:44:00+00:00 [queued]>
+[2024-10-23T11:45:44.162-0300] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-23T11:45:44.163-0300] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2024-10-23T11:45:44.168-0300] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-23T11:45:44.468-0300] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): delayers> on 2024-10-23 14:44:00+00:00
+[2024-10-23T11:45:44.474-0300] {standard_task_runner.py:55} INFO - Started process 84028 to run task
+[2024-10-23T11:45:44.496-0300] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'psg_8.conversation_2', 'delayers', 'scheduled__2024-10-23T14:44:00+00:00', '--job-id', '439', '--raw', '--subdir', 'DAGS_FOLDER/agendedd.py', '--cfg-path', '/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/tmpj3_q7e_r']
+[2024-10-23T11:45:44.504-0300] {standard_task_runner.py:83} INFO - Job 439: Subtask delayers
+[2024-10-23T11:45:44.808-0300] {local_task_job.py:159} INFO - Task exited with return code Negsignal.SIGILL
+[2024-10-23T11:45:44.984-0300] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

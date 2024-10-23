@@ -1,0 +1,13 @@
+[2024-10-22T18:00:46.223-0300] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: psg_5.conversation_1.delayers scheduled__2024-10-22T20:48:01.515497+00:00 [queued]>
+[2024-10-22T18:00:46.239-0300] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: psg_5.conversation_1.delayers scheduled__2024-10-22T20:48:01.515497+00:00 [queued]>
+[2024-10-22T18:00:46.240-0300] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-22T18:00:46.240-0300] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2024-10-22T18:00:46.240-0300] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-22T18:00:46.267-0300] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): delayers> on 2024-10-22 20:48:01.515497+00:00
+[2024-10-22T18:00:46.272-0300] {standard_task_runner.py:55} INFO - Started process 39674 to run task
+[2024-10-22T18:00:46.284-0300] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'psg_5.conversation_1', 'delayers', 'scheduled__2024-10-22T20:48:01.515497+00:00', '--job-id', '132', '--raw', '--subdir', 'DAGS_FOLDER/news2.py', '--cfg-path', '/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/tmp9jl2kuw4']
+[2024-10-22T18:00:46.287-0300] {standard_task_runner.py:83} INFO - Job 132: Subtask delayers
+[2024-10-22T18:00:46.379-0300] {local_task_job.py:159} INFO - Task exited with return code Negsignal.SIGILL
+[2024-10-22T18:00:46.471-0300] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

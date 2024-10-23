@@ -1,0 +1,35 @@
+[2024-10-22T17:14:43.584-0300] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: psg_4.conversation_2 scheduled__2024-10-21T17:10:00+00:00 [queued]>
+[2024-10-22T17:14:43.645-0300] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: psg_4.conversation_2 scheduled__2024-10-21T17:10:00+00:00 [queued]>
+[2024-10-22T17:14:43.645-0300] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-22T17:14:43.646-0300] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2024-10-22T17:14:43.646-0300] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-22T17:14:43.669-0300] {taskinstance.py:1383} INFO - Executing <Task(SubDagOperator): conversation_2> on 2024-10-21 17:10:00+00:00
+[2024-10-22T17:14:43.676-0300] {standard_task_runner.py:55} INFO - Started process 35681 to run task
+[2024-10-22T17:14:43.684-0300] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'psg_4', 'conversation_2', 'scheduled__2024-10-21T17:10:00+00:00', '--job-id', '98', '--raw', '--subdir', 'DAGS_FOLDER/news1.py', '--cfg-path', '/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/tmp0v9c0o58']
+[2024-10-22T17:14:43.687-0300] {standard_task_runner.py:83} INFO - Job 98: Subtask conversation_2
+[2024-10-22T17:14:43.849-0300] {task_command.py:376} INFO - Running <TaskInstance: psg_4.conversation_2 scheduled__2024-10-21T17:10:00+00:00 [running]> on host MacBook-Air-de-Pedro.local
+[2024-10-22T17:14:43.921-0300] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=psg_4
+AIRFLOW_CTX_TASK_ID=conversation_2
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-21T17:10:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-21T17:10:00+00:00
+[2024-10-22T17:14:43.930-0300] {logging_mixin.py:137} WARNING - /private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/airflow/utils/context.py:204 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2024-10-22T17:14:43.995-0300] {subdag.py:171} INFO - Created DagRun: scheduled__2024-10-21T17:10:00+00:00
+[2024-10-22T17:14:58.845-0300] {local_task_job.py:222} WARNING - State of this instance has been externally set to queued. Terminating instance.
+[2024-10-22T17:14:58.852-0300] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 35681. PIDs of all processes in the group: [35681]
+[2024-10-22T17:14:58.853-0300] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 35681
+[2024-10-22T17:14:58.853-0300] {taskinstance.py:1562} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-10-22T17:14:58.859-0300] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/airflow/sensors/base.py", line 211, in execute
+    time.sleep(self._get_next_poke_interval(started_at, run_duration, try_number))
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1564, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2024-10-22T17:14:58.868-0300] {taskinstance.py:1401} INFO - Marking task as FAILED. dag_id=psg_4, task_id=conversation_2, execution_date=20241021T171000, start_date=20241022T201443, end_date=20241022T201458
+[2024-10-22T17:14:58.931-0300] {standard_task_runner.py:100} ERROR - Failed to execute job 98 for task conversation_2 (Task received SIGTERM signal; 35681)
+[2024-10-22T17:14:58.951-0300] {process_utils.py:79} INFO - Process psutil.Process(pid=35681, status='terminated', exitcode=1, started='17:14:43') (35681) terminated with exit code 1

@@ -1,0 +1,13 @@
+[2024-10-23T12:26:08.543-0300] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: psg_9.conversation_1 scheduled__2024-10-21T15:30:00+00:00 [queued]>
+[2024-10-23T12:26:08.555-0300] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: psg_9.conversation_1 scheduled__2024-10-21T15:30:00+00:00 [queued]>
+[2024-10-23T12:26:08.556-0300] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-23T12:26:08.557-0300] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2024-10-23T12:26:08.557-0300] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-23T12:26:08.658-0300] {taskinstance.py:1383} INFO - Executing <Task(SubDagOperator): conversation_1> on 2024-10-21 15:30:00+00:00
+[2024-10-23T12:26:08.665-0300] {standard_task_runner.py:55} INFO - Started process 86947 to run task
+[2024-10-23T12:26:08.676-0300] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'psg_9', 'conversation_1', 'scheduled__2024-10-21T15:30:00+00:00', '--job-id', '533', '--raw', '--subdir', 'DAGS_FOLDER/agendedd.py', '--cfg-path', '/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/tmpp8fm5zdr']
+[2024-10-23T12:26:08.682-0300] {standard_task_runner.py:83} INFO - Job 533: Subtask conversation_1
+[2024-10-23T12:26:08.699-0300] {local_task_job.py:159} INFO - Task exited with return code Negsignal.SIGILL
+[2024-10-23T12:26:08.784-0300] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

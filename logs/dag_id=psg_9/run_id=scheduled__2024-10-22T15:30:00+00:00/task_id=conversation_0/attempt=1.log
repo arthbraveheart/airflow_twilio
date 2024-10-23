@@ -1,0 +1,26 @@
+[2024-10-23T12:30:08.283-0300] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: psg_9.conversation_0 scheduled__2024-10-22T15:30:00+00:00 [queued]>
+[2024-10-23T12:30:08.298-0300] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: psg_9.conversation_0 scheduled__2024-10-22T15:30:00+00:00 [queued]>
+[2024-10-23T12:30:08.299-0300] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-23T12:30:08.300-0300] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2024-10-23T12:30:08.300-0300] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-23T12:30:08.333-0300] {taskinstance.py:1383} INFO - Executing <Task(SubDagOperator): conversation_0> on 2024-10-22 15:30:00+00:00
+[2024-10-23T12:30:08.338-0300] {standard_task_runner.py:55} INFO - Started process 87332 to run task
+[2024-10-23T12:30:08.350-0300] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'psg_9', 'conversation_0', 'scheduled__2024-10-22T15:30:00+00:00', '--job-id', '540', '--raw', '--subdir', 'DAGS_FOLDER/agendedd.py', '--cfg-path', '/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/tmpzcaxjejm']
+[2024-10-23T12:30:08.355-0300] {standard_task_runner.py:83} INFO - Job 540: Subtask conversation_0
+[2024-10-23T12:30:08.607-0300] {task_command.py:376} INFO - Running <TaskInstance: psg_9.conversation_0 scheduled__2024-10-22T15:30:00+00:00 [running]> on host MacBook-Air-de-Pedro.local
+[2024-10-23T12:30:08.705-0300] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=psg_9
+AIRFLOW_CTX_TASK_ID=conversation_0
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-22T15:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-22T15:30:00+00:00
+[2024-10-23T12:30:08.714-0300] {logging_mixin.py:137} WARNING - /private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/airflow/utils/context.py:204 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2024-10-23T12:30:08.784-0300] {subdag.py:171} INFO - Created DagRun: scheduled__2024-10-22T15:30:00+00:00
+[2024-10-23T12:31:08.840-0300] {base.py:213} INFO - Success criteria met. Exiting.
+[2024-10-23T12:31:08.858-0300] {subdag.py:186} INFO - Execution finished. State is success
+[2024-10-23T12:31:08.883-0300] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=psg_9, task_id=conversation_0, execution_date=20241022T153000, start_date=20241023T153008, end_date=20241023T153108
+[2024-10-23T12:31:08.983-0300] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-23T12:31:09.132-0300] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

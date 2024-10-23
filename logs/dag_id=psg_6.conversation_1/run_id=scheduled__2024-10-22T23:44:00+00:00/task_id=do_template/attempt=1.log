@@ -1,0 +1,140 @@
+[2024-10-22T20:48:26.904-0300] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: psg_6.conversation_1.do_template scheduled__2024-10-22T23:44:00+00:00 [None]>
+[2024-10-22T20:48:26.975-0300] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: psg_6.conversation_1.do_template scheduled__2024-10-22T23:44:00+00:00 [None]>
+[2024-10-22T20:48:26.976-0300] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-22T20:48:26.977-0300] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2024-10-22T20:48:26.979-0300] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-22T20:48:27.427-0300] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): do_template> on 2024-10-22 23:44:00+00:00
+[2024-10-22T20:48:27.436-0300] {standard_task_runner.py:55} INFO - Started process 49220 to run task
+[2024-10-22T20:48:27.463-0300] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'psg_6.conversation_1', 'do_template', 'scheduled__2024-10-22T23:44:00+00:00', '--job-id', '230', '--raw', '--subdir', 'DAGS_FOLDER/agendedd.py', '--cfg-path', '/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/tmprvgeokh2']
+[2024-10-22T20:48:27.468-0300] {standard_task_runner.py:83} INFO - Job 230: Subtask do_template
+[2024-10-22T20:48:28.695-0300] {task_command.py:376} INFO - Running <TaskInstance: psg_6.conversation_1.do_template scheduled__2024-10-22T23:44:00+00:00 [running]> on host MacBook-Air-de-Pedro.local
+[2024-10-22T20:48:29.640-0300] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=psg_6.conversation_1
+AIRFLOW_CTX_TASK_ID=do_template
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-22T23:44:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-22T23:44:00+00:00
+[2024-10-22T20:48:30.060-0300] {__init__.py:56} INFO - -- BEGIN Twilio API Request --
+[2024-10-22T20:48:30.062-0300] {__init__.py:66} INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/AC069f1485becb681509aa3ea0b36dec02/Messages.json
+[2024-10-22T20:48:30.063-0300] {__init__.py:69} INFO - Headers:
+[2024-10-22T20:48:30.064-0300] {__init__.py:73} INFO - Content-Type : application/x-www-form-urlencoded
+[2024-10-22T20:48:30.065-0300] {__init__.py:73} INFO - User-Agent : twilio-python/9.3.4 (Darwin x86_64) Python/3.10.11
+[2024-10-22T20:48:30.065-0300] {__init__.py:73} INFO - X-Twilio-Client : python-9.3.4
+[2024-10-22T20:48:30.066-0300] {__init__.py:73} INFO - Accept-Charset : utf-8
+[2024-10-22T20:48:30.067-0300] {__init__.py:73} INFO - Accept : application/json
+[2024-10-22T20:48:30.068-0300] {__init__.py:75} INFO - -- END Twilio API Request --
+[2024-10-22T20:48:30.566-0300] {__init__.py:81} INFO - Response Status Code: 201
+[2024-10-22T20:48:30.567-0300] {__init__.py:82} INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '815', 'Connection': 'keep-alive', 'Date': 'Tue, 22 Oct 2024 23:48:30 GMT', 'X-Powered-By': 'AT-5000', 'Twilio-Concurrent-Requests': '2', 'Twilio-Request-Id': 'RQ7954f4c7f10833321d01ee5a3bbdb97b', 'Twilio-Request-Duration': '0.123', 'X-Home-Region': 'us1', 'X-Api-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key, X-Pre-Auth-Context, X-Target-Region', 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag, Twilio-Request-Id', 'Access-Control-Allow-Credentials': 'true', 'X-Shenanigans': 'none', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 73ebfb716924e4d5187b2e9f716dcf94.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'GIG51-P3', 'X-Amz-Cf-Id': 'F3Vw-NV-chXlmQ4coBB5mwR0IcXLHi1daSj3k8HpPDPIn2Vn9K6VFA=='}
+[2024-10-22T20:48:30.570-0300] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-22T20:48:30.806-0300] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=psg_6.conversation_1, task_id=do_template, execution_date=20241022T234400, start_date=20241022T234826, end_date=20241022T234830
+[2024-10-22T20:48:31.372-0300] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-22T20:49:43.717-0300] {taskinstance.py:2629} INFO - Skipping mini scheduling run due to exception: None
+Traceback (most recent call last):
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3243, in _wrap_pool_connect
+    return fn()
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 145, in _do_get
+    with util.safe_reraise():
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 665, in __connect
+    with util.safe_reraise():
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 590, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/psycopg2-2.9.10-py3.10-macosx-10.9-x86_64.egg/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 2594, in schedule_downstream_tasks
+    ).one()
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2856, in one
+    return self._iter().one()
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2894, in _iter
+    result = self.session.execute(
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1688, in execute
+    conn = self._connection_for_bind(bind)
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1529, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 747, in _connection_for_bind
+    conn = bind.connect()
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3197, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3276, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3246, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2100, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3243, in _wrap_pool_connect
+    return fn()
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 145, in _do_get
+    with util.safe_reraise():
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 665, in __connect
+    with util.safe_reraise():
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 590, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/psycopg2-2.9.10-py3.10-macosx-10.9-x86_64.egg/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)

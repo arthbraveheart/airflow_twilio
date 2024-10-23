@@ -1,0 +1,34 @@
+[2024-10-23T11:38:19.680-0300] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: psg_8.conversation_2.do_template scheduled__2024-10-23T14:37:00+00:00 [queued]>
+[2024-10-23T11:38:19.709-0300] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: psg_8.conversation_2.do_template scheduled__2024-10-23T14:37:00+00:00 [queued]>
+[2024-10-23T11:38:19.710-0300] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-23T11:38:19.711-0300] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2024-10-23T11:38:19.712-0300] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-23T11:38:20.121-0300] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): do_template> on 2024-10-23 14:37:00+00:00
+[2024-10-23T11:38:20.126-0300] {standard_task_runner.py:55} INFO - Started process 83007 to run task
+[2024-10-23T11:38:20.141-0300] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'psg_8.conversation_2', 'do_template', 'scheduled__2024-10-23T14:37:00+00:00', '--job-id', '379', '--raw', '--subdir', 'DAGS_FOLDER/agendedd.py', '--cfg-path', '/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/tmpsalctrz0']
+[2024-10-23T11:38:20.145-0300] {standard_task_runner.py:83} INFO - Job 379: Subtask do_template
+[2024-10-23T11:38:21.094-0300] {task_command.py:376} INFO - Running <TaskInstance: psg_8.conversation_2.do_template scheduled__2024-10-23T14:37:00+00:00 [running]> on host MacBook-Air-de-Pedro.local
+[2024-10-23T11:38:21.431-0300] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=psg_8.conversation_2
+AIRFLOW_CTX_TASK_ID=do_template
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-23T14:37:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-23T14:37:00+00:00
+[2024-10-23T11:38:21.878-0300] {__init__.py:56} INFO - -- BEGIN Twilio API Request --
+[2024-10-23T11:38:21.879-0300] {__init__.py:66} INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/AC069f1485becb681509aa3ea0b36dec02/Messages.json
+[2024-10-23T11:38:21.879-0300] {__init__.py:69} INFO - Headers:
+[2024-10-23T11:38:21.880-0300] {__init__.py:73} INFO - Content-Type : application/x-www-form-urlencoded
+[2024-10-23T11:38:21.881-0300] {__init__.py:73} INFO - User-Agent : twilio-python/9.3.4 (Darwin x86_64) Python/3.10.11
+[2024-10-23T11:38:21.882-0300] {__init__.py:73} INFO - X-Twilio-Client : python-9.3.4
+[2024-10-23T11:38:21.885-0300] {__init__.py:73} INFO - Accept-Charset : utf-8
+[2024-10-23T11:38:21.886-0300] {__init__.py:73} INFO - Accept : application/json
+[2024-10-23T11:38:21.887-0300] {__init__.py:75} INFO - -- END Twilio API Request --
+[2024-10-23T11:38:22.350-0300] {__init__.py:81} INFO - Response Status Code: 201
+[2024-10-23T11:38:22.353-0300] {__init__.py:82} INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '815', 'Connection': 'keep-alive', 'Date': 'Wed, 23 Oct 2024 14:38:22 GMT', 'X-Powered-By': 'AT-5000', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQc1a89c8cb528f3e15016a08de4de0b4f', 'Twilio-Request-Duration': '0.119', 'X-Home-Region': 'us1', 'X-Api-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key, X-Pre-Auth-Context, X-Target-Region', 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag, Twilio-Request-Id', 'Access-Control-Allow-Credentials': 'true', 'X-Shenanigans': 'none', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 bd7b916b703bda42f749ae299e975cf4.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'GIG51-P3', 'X-Amz-Cf-Id': 'DTsK2ThPjeA7xsy7yqnWIvRmIYnkYeP1eSnMn94HeIBPbS9LpiOomg=='}
+[2024-10-23T11:38:22.355-0300] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-23T11:38:22.366-0300] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=psg_8.conversation_2, task_id=do_template, execution_date=20241023T143700, start_date=20241023T143819, end_date=20241023T143822
+[2024-10-23T11:38:22.497-0300] {local_task_job.py:159} INFO - Task exited with return code 0
+[2024-10-23T11:38:22.635-0300] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,2 @@
+[2024-10-22T16:43:40.888-0300] {taskinstance.py:1155} INFO - Dependencies not met for <TaskInstance: psg_3.conversation_1 scheduled__2024-10-21T17:10:00+00:00 [failed]>, dependency 'Task Instance State' FAILED: Task is in the 'failed' state.
+[2024-10-22T16:43:40.931-0300] {local_task_job.py:98} INFO - Task is not able to be run

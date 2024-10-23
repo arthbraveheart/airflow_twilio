@@ -1,0 +1,34 @@
+[2024-10-22T19:46:43.571-0300] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: psg_6.conversation_0 scheduled__2024-10-21T17:10:00+00:00 [queued]>
+[2024-10-22T19:46:43.646-0300] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: psg_6.conversation_0 scheduled__2024-10-21T17:10:00+00:00 [queued]>
+[2024-10-22T19:46:43.646-0300] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-22T19:46:43.647-0300] {taskinstance.py:1363} INFO - Starting attempt 2 of 1
+[2024-10-22T19:46:43.647-0300] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-22T19:46:43.746-0300] {taskinstance.py:1383} INFO - Executing <Task(SubDagOperator): conversation_0> on 2024-10-21 17:10:00+00:00
+[2024-10-22T19:46:43.750-0300] {standard_task_runner.py:55} INFO - Started process 44453 to run task
+[2024-10-22T19:46:43.763-0300] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'psg_6', 'conversation_0', 'scheduled__2024-10-21T17:10:00+00:00', '--job-id', '143', '--raw', '--subdir', 'DAGS_FOLDER/agendedd.py', '--cfg-path', '/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/T/tmpt5k82vxh']
+[2024-10-22T19:46:43.775-0300] {standard_task_runner.py:83} INFO - Job 143: Subtask conversation_0
+[2024-10-22T19:46:43.996-0300] {task_command.py:376} INFO - Running <TaskInstance: psg_6.conversation_0 scheduled__2024-10-21T17:10:00+00:00 [running]> on host MacBook-Air-de-Pedro.local
+[2024-10-22T19:46:44.216-0300] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=psg_6
+AIRFLOW_CTX_TASK_ID=conversation_0
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-21T17:10:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-21T17:10:00+00:00
+[2024-10-22T19:46:44.225-0300] {logging_mixin.py:137} WARNING - /private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/airflow/utils/context.py:204 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2024-10-22T19:46:44.378-0300] {subdag.py:171} INFO - Created DagRun: scheduled__2024-10-21T17:10:00+00:00
+[2024-10-22T19:47:54.032-0300] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 44453. PIDs of all processes in the group: [44453]
+[2024-10-22T19:47:54.036-0300] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 44453
+[2024-10-22T19:47:54.037-0300] {taskinstance.py:1562} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-10-22T19:47:54.052-0300] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/airflow/sensors/base.py", line 211, in execute
+    time.sleep(self._get_next_poke_interval(started_at, run_duration, try_number))
+  File "/private/var/root/devs/api_wpp/apache_airflows/airflowers/.venv/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1564, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2024-10-22T19:47:54.065-0300] {taskinstance.py:1401} INFO - Marking task as FAILED. dag_id=psg_6, task_id=conversation_0, execution_date=20241021T171000, start_date=20241022T224643, end_date=20241022T224754
+[2024-10-22T19:47:54.136-0300] {standard_task_runner.py:100} ERROR - Failed to execute job 143 for task conversation_0 (Task received SIGTERM signal; 44453)
+[2024-10-22T19:47:54.176-0300] {process_utils.py:79} INFO - Process psutil.Process(pid=44453, status='terminated', exitcode=1, started='19:46:43') (44453) terminated with exit code 1
